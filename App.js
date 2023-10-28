@@ -3,12 +3,14 @@ import { StyleSheet, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import Constants from "./Constants";
 import Player from "./components/Player";
+import { GameLoop } from "./GameLoop";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <GameEngine
         style={styles.gameCanvas}
+        systems={[GameLoop]}
         entities={{
           player: {
             position: [0, 0],
