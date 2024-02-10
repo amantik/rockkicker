@@ -3,6 +3,7 @@ import { StyleSheet, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import Constants from "./Constants";
 import Player from "./components/Player";
+import Button from "./components/Button";
 import { GameLoop } from "./GameLoop";
 
 export default function App() {
@@ -16,6 +17,18 @@ export default function App() {
             position: [0, 0],
             size: Constants.CELL_SIZE,
             renderer: <Player />,
+          },
+          button_up: {
+            position: [125, 350],
+            size: 3*Constants.CELL_SIZE,
+            text: "UP",
+            renderer: <Button />,
+          },
+          button_down: {
+            position: [125, 420],
+            size: 3*Constants.CELL_SIZE,
+            text: "DOWN",
+            renderer: <Button />,
           },
         }}
       ></GameEngine>
